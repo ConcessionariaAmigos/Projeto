@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form>
+    <form action="logar.php" method="POST">
         <fieldset>
             <legend>Login</legend>
             <label>Email:</label>
-            <input type="email">
+            <input type="email" name="email">
             <label>Senha:</label>
-            <input type="password">
-            <button type="button">Entrar</button>
+            <input type="password" name="senha">
+            <button type="submit">Entrar</button>
         </fieldset>
     </form>
 </body>

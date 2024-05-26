@@ -1,9 +1,13 @@
 <?php
 
+session_start();
+
 $localhost = "localhost";
 $user = "root";
 $passw = "";
 $banco = "bd_auto";
+
+global $pdo;
 
 // Oriented to objects with PDO
 
