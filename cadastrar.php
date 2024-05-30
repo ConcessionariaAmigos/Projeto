@@ -31,6 +31,9 @@
                     <a href="">
                         <li class="navLi">Cadastro</li>
                     </a>
+                    <a href="index.php">
+                        <li class="navLi">Voltar</li>
+                    </a>
                 </ul>
             </nav>
         </div>

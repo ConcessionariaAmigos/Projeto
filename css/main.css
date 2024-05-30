@@ -16,7 +16,7 @@
 }
 
 .headerContainer .headerLogo a img {
-    width: 15%;
+    width: 10%;
 }
 
 .headerLogo {
@@ -34,11 +34,13 @@
 .headerContainer .nav .navUl {
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 
 .headerContainer .nav .navUl a {
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 .headerContainer .nav .navUl .navLi {

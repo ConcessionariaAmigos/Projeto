@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,11 +21,21 @@
             </div>
             <nav class="nav">
                 <ul class="navUl">
-                    <a href=""><li class="navLi">Contato</li></a>
+                    <a href="./contato.php"><li class="navLi">Contato</li></a>
                     <a href=""><li class="navLi">Ajuda</li></a>
                     <a href=""><li class="navLi">Minhas reservas</li></a>
+                    <?php
+                    if(isset($_SESSION['user'])){
+                        echo '<li class="navLi">' . $_SESSION['user'] . '</li>';
+                        echo '<a href="logoff.php"><li class="navLi">Sair</li></a>';
+                    }else{
+                    ?>
                     <a href="login.php"><li class="navLi">Login</li></a>
                     <a href="./cadastrar.php"><li class="navLi">Cadastro</li></a>
+                    <?php
+                    }
+                    ?>
+                    
                 </ul>
             </nav>
         </div>
@@ -31,15 +46,15 @@
                 <h2>Alugue um carro</h2>
                 <form action="">
                     <div class="pickUpLocation">
-                        <label for="">Local de Retirada</label>
+                        <label>Local de Retirada</label>
                         <input type="text" placeholder="Onde você quer alugar?">
                     </div>
                     <div>
-                        <label for="">Data e Hora de Retirada</label>
+                        <label>Data e Hora de Retirada</label>
                         <input type="date" name="" id="">
                     </div>
                     <div>
-                        <label for="">Data e Hora de Devolução</label>
+                        <label>Data e Hora de Devolução</label>
                         <input type="date" name="" id="">
                     </div>
                     <a href="" class="button">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "bd_auto");
+$conn = mysqli_connect("localhost", "root", "","bd_auto");
 if (!$conn) {
     echo("Deu ruim!!");
 }
@@ -10,7 +10,7 @@ echo("Conexão criada com sucesso!!");
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
-$sql = "SELECT user, id FROM usuario WHERE email = '$email' AND senha = '$senha'";
+$sql = "SELECT user,id FROM usuario WHERE email = '$email' AND senha = '$senha'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['user'] = $row['user'];
     $_SESSION['id'] = $row['id'];
 
-    header('Location:http://localhost/ProjetoPHP/index.php'  );
+    header('Location:http://localhost/ProjetoPHP/index.php');
 } else {
     echo("Email ou senha inválidos!!");
     header('Location: https://localhost/ProjetoPHP/login.php');
